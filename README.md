@@ -6,14 +6,15 @@ Minal set of  TripeWrire . ThinWire check file Hash and report if changed.
 
 Usage: Simple Check
 =============
-  require 'thinwire.rb'
+
+	require 'thinwire.rb'
 	tw = ThinWire.new
 	tw.start()
 
 Usage: Select Checking file
 ==============
 
-  require 'thinwire.rb'
+	require 'thinwire.rb'
 	tw = ThinWire.new("/var/www/example.com")
 	tw.start()
 
