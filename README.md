@@ -14,6 +14,8 @@ Usage: Simple Check
 Usage: Select Checking file
 ==============
 
+To chagen file watching, set path in constructor.
+
 	require 'thinwire.rb'
 	tw = ThinWire.new("/var/www/example.com")
 	tw.start()
@@ -22,7 +24,9 @@ Usage: Select Checking file
 Ussage: Reports by MAIL
 ============
 
+To Chage report destination.
 Add callback to class to report mail
+
 
 
 	tw.report = Proc.new{|msg|
@@ -45,3 +49,9 @@ Add callback to class to report mail
 		mail.deliver!
 		puts :end
 	}
+	tw.start()
+
+
+
+
+
