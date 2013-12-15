@@ -54,12 +54,12 @@ class ThinWire
 	def call_report( add_files,del_files,mod_files )
 		message = StringIO.new
 		
-		message.puts "ファイルの改変がありました。\n"
+		message.puts "Files Status has chaged。\n"
 		message.puts "-"*10
 		message.puts "\n"
 		unless add_files.empty? then
 			message.puts "\n"
-			message.puts "「追加」されました。\n"
+			message.puts "Add : Files is added.\n"
 			message.puts  add_files.map{|k,v|"#{v} => #{k}"}.join("\n")
 			message.puts "\n"
 			message.puts "-"*10
@@ -67,7 +67,7 @@ class ThinWire
 		end
 		unless del_files.empty? then
 			message.puts "\n"
-			message.puts "「削除」されました。\n"
+			message.puts "Del : File is deleted.\n"
 			message.puts  del_files.map{|k,v|"#{v} => #{k}"}.join("\n")
 			message.puts "\n"
 			message.puts "-"*10
@@ -75,7 +75,7 @@ class ThinWire
 		end
 		unless mod_files.empty? then
 			message.puts "\n"
-			message.puts "「更新」されました。\n"
+			message.puts "mod : File is Modified.\n"
 			message.puts  mod_files.map{|k,v|"#{v} => #{k}"}.join("\n")
 			message.puts "\n"
 			message.puts "-"*10
